@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Thunder";
+  font-weight: 400;
+  src: url("../assets/fonts/A-Love-of-Thunder.ttf");
+}
+
+html, body {
+  height:100%;
+} 
+
+body{
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.main{
+  color: black;
+  min-height: 100vh;
+}

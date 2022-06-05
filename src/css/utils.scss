@@ -1,0 +1,25 @@
+$merah: #ED1C24;
+
+$breakpoints: (
+  "xxs": "400px",
+  "xs": "576px",
+  "sm": "640px",
+  "md": "768px",
+  "lg": "1024px",
+  "xl": "1280px",
+  "2xl": "1536px",
+);
+
+@mixin breakpoint($size) {
+  @media screen and(max-width : map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@function rem($pixels, $context: 16) {
+  @return ($pixels/$context) * 1rem;
+}
+
+@function vh($amount) {
+  @return calc(var(--vh, 1vh) * #{$amount});
+}
