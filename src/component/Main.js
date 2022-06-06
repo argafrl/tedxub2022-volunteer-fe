@@ -233,7 +233,7 @@ const Main = () => {
                   aria-describedby="alert-dialog-description"
                 >
                   <button onClick={handleClose}>X</button>
-                  <img src={`img/bg-${team.nama}.png`} alt={team.fullNama} />
+                  {/* <img src={`img/bg-${team.nama}.png`} alt={team.fullNama} /> */}
                   <div className="dialog-content">
                     <h1>{team.fullNama}</h1>
                     <p>{team.desc}</p>
