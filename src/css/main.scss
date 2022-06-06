@@ -135,6 +135,21 @@
       @include breakpoint(xxs) {
         width: 320%;
       }
+      @media screen and (max-width: 388px) {
+        width: 340%;
+      }
+      @media screen and (max-width: 372px) {
+        width: 360%;
+      }
+      @media screen and (max-width: 360px) {
+        width: 380%;
+      }
+      @media screen and (max-width: 340px) {
+        width: 400%;
+      }
+      @media screen and (max-width: 320px) {
+        width: 420%;
+      }
     }
     .merayakan-content{
       // float: left;
@@ -170,6 +185,9 @@
         }
         @include breakpoint(md) {
           font-size: rem(20) !important;
+        }
+        @media screen and (max-width: 360px) {
+          font-size: rem(18) !important;
         }
       }
       h3{
