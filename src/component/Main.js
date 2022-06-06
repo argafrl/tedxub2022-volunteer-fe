@@ -9,7 +9,7 @@ import logoHitam from "../assets/images/tedx_hitam.png"
 import dividerPaper from "../assets/images/divider-paper.png"
 import tanganKiri from "../assets/images/tangan-kiri.png"
 import tanganKanan from "../assets/images/tangan-kanan.png"
-import burnPaper from "../assets/images/BurnPaper.png"
+import burnPaper from "../assets/images/BurnPaper-1.png"
 
 import videoTedx from "../assets/videos/web-landscape.mp4"
 import videoTedxVertical from "../assets/videos/web-vertical.mp4"
@@ -59,13 +59,22 @@ const Main = () => {
         <video
           autoPlay
           loop
-          // muted
+          muted
           className="video-tedx"
           playsInline
           src={src}
           onLoadedData={onLoadedData}
-          style={{ width: "100%", height: "auto", objectFit: "cover", opacity: isVideoLoaded ? 1 : 0 }}
+          style={{ width: "100vw", height: "100vh", objectFit: "cover", opacity: isVideoLoaded ? 1 : 0 }}
         />
+        {/* <iframe
+          width="853"
+          height="480"
+          src="https://youtube.com/embed/Ib6-PTbnIB4?autoplay=1&controls=0&fs=0&loop=1&modestbranding=1"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        /> */}
       </div>
     );
   };
@@ -263,7 +272,7 @@ const Main = () => {
 
       <div className="footer">
         <img src={logoHitam} alt="TEDxUB 2022" />
-        <h1>“This independent <span style={{color: "red"}}>TEDx</span> event is operated under license from <span style={{color: "red"}}>TEDx</span>.”</h1>
+        <h1>“This independent <span style={{color: "red"}}>TEDx</span> event is operated under license from <span style={{color: "red"}}>TED</span>.”</h1>
       </div>
     </div>
   );
