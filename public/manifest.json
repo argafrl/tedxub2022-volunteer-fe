@@ -8,9 +8,24 @@
       "type": "image/x-icon"
     },
     {
-      "src": "tedxub-icon.jpg",
+      "src": "tedxub-icon-192.jpg",
       "type": "image/jpg",
-      "sizes": "400x400"
+      "sizes": "192x192"
+    },
+    {
+      "src": "tedxub-icon-256.jpg",
+      "type": "image/jpg",
+      "sizes": "256x256"
+    },
+    {
+      "src": "tedxub-icon-384.jpg",
+      "type": "image/jpg",
+      "sizes": "384x384"
+    },
+    {
+      "src": "tedxub-icon-512.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",

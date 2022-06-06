@@ -14,7 +14,7 @@ import burnPaper from "../assets/images/BurnPaper-1.png"
 import videoTedx from "../assets/videos/web-landscape.mp4"
 import videoTedxVertical from "../assets/videos/web-vertical-1.mp4"
 import { useEffect, useState } from "react";
-import { Dialog } from "@mui/material";
+import { CircularProgress, Dialog } from "@mui/material";
 
 const Main = () => {
 
@@ -56,16 +56,21 @@ const Main = () => {
     };
     return (
       <div className="container">
+        {/* <div className="spinner-wrapper">
+            <CircularProgress className="spinner" size={60} />
+        </div> */}
         <video
           autoPlay
           loop
           muted
           className="video-tedx"
           playsInline
-          src={src}
-          // onLoadedData={onLoadedData}
-          style={{ width: "100vw", height: "100vh", objectFit: "cover"}}
-        />
+          
+          onLoadedData={onLoadedData}
+          style={{ width: "100vw", height: "100vh", objectFit: "cover", opacity: isVideoLoaded ? 1 : 0 }}
+        >
+          <source src={src} type="video/mp4"/>
+        </video>
         {/* <iframe
           width="853"
           height="480"
