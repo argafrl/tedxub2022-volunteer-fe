@@ -70,6 +70,11 @@
     }
     a{
       text-decoration: none;
+      transition: 0.3s;
+      
+      &:hover {
+        text-shadow: 1px 1px 2px white;
+      }
     }
     p{
       text-align: justify;
@@ -92,7 +97,7 @@
     // }
     // padding: 20rem;
     width: 100%;
-    @include breakpoint(md) {
+    @media screen and (max-width: 1200px) {
       margin-top: -20px;
       width: 100%;
       overflow: hidden;
@@ -103,15 +108,32 @@
       position: relative;
       z-index: 999;
       width: 100%;
-      @include breakpoint(md) {
-        width: 290%;
+
+      @media screen and (max-width: 1200px) {
+        width: 120%;
         margin-left: -100px;
         overflow: hidden;
         float: left;
         object-fit: cover;
       }
+
+      @include breakpoint(lg) {
+        width: 130%;
+      }
+
+      @media screen and (max-width: 925px) {
+        width: 140%;
+      }
+
+      @media screen and (max-width: 855px) {
+        width: 150%;
+      }
+      
+      @include breakpoint(md) {
+        width: 290%;
+      }
       @include breakpoint(xxs) {
-        width: 310%;
+        width: 320%;
       }
     }
     .merayakan-content{
@@ -123,7 +145,15 @@
       margin-top: 200px;
       // padding: 180 200px;
       padding: 0 10%;
-
+      @media screen and (max-width: 1400px) {
+        margin-top: 15%;
+      }
+      @media screen and (max-width: 1300px) {
+        margin-top: 12%;
+      }
+      @media screen and (max-width: 1300px) {
+        margin-top: 150px;
+      }
       @include breakpoint(md) {
         padding: 0 10%;
         margin-top: 150px;
@@ -135,8 +165,11 @@
         color: white;
         font-size: 60px;
         text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+        @media screen and (max-width: 1400px) {
+          font-size: rem(35) !important;
+        }
         @include breakpoint(md) {
-          font-size: rem(23) !important;
+          font-size: rem(20) !important;
         }
       }
       h3{
@@ -146,6 +179,12 @@
         color: white;
         font-size: 35px;
         text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+        @media screen and (max-width: 1400px) {
+          font-size: rem(30) !important;
+        }
+        @media screen and (max-width: 855px) {
+          font-size: rem(20) !important;
+        }
         @include breakpoint(md) {
           font-size: rem(18);
         }
@@ -154,6 +193,12 @@
         text-align: justify;
         color: black;
         font-size: 25px;
+        @media screen and (max-width: 1400px) {
+          font-size: rem(22) !important;
+        }
+        @media screen and (max-width: 1200px) {
+          font-size: rem(18) !important;
+        }
         @include breakpoint(md) {
           font-size: rem(12) !important;
         }
@@ -218,6 +263,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.3s;
+        
+        &:hover {
+          transform: scale(0.98);
+        }
         @include breakpoint(md) {
           width: 100px;
           height: 100px;
@@ -311,6 +361,11 @@
         
         font-size: 40px;
         font-family: "Thunder";
+        transition: 0.3s;
+        
+        &:hover {
+          transform: scale(1.02);
+        }
 
         @include breakpoint(md) {
           height: rem(50);
@@ -345,6 +400,7 @@
     padding: 25px 0 160px 0;
     border-top: 5px solid black;
     @include breakpoint(md) {
+      padding: 0;
       margin-top: -50px;
       min-height: 300px;
       // padding: 25px 0 230px 0;
