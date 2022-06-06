@@ -11,13 +11,20 @@ import tanganKiri from "../assets/images/tangan-kiri.png"
 import tanganKanan from "../assets/images/tangan-kanan.png"
 import burnPaper from "../assets/images/BurnPaper.png"
 
-import videoTedx from "../assets/videos/TEDx-Web-Looping.mp4"
-import { useState } from "react";
+import videoTedx from "../assets/videos/web-landscape.mp4"
+import videoTedxVertical from "../assets/videos/web-vertical.mp4"
+import { useEffect, useState } from "react";
 import { Dialog } from "@mui/material";
 
 const Main = () => {
 
   const [open, setOpen] = useState('');
+  const [width, setWindowWidth] = useState(0);
+
+  const updateDimensions = () => {
+    const width = window.innerWidth
+    setWindowWidth(width)
+  }
 
   const handleClickOpen = (idx) => {
     setOpen(idx);
@@ -25,6 +32,41 @@ const Main = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  useEffect(() => { 
+
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+    return () => 
+    window.removeEventListener("resize",updateDimensions);
+  }, [width])
+
+  const getVideoSrc = width => {
+    if (width >= 768) return videoTedx;
+    return videoTedxVertical;
+  };
+
+  const Video = props => {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const src = getVideoSrc(window.innerWidth);
+    const onLoadedData = () => {
+      setIsVideoLoaded(true);
+    };
+    return (
+      <div className="container">
+        <video
+          autoPlay
+          loop
+          className="video-tedx"
+          playsInline
+          src={src}
+          onLoadedData={onLoadedData}
+          style={{ width: "100%", height: "auto", objectFit: "cover", opacity: isVideoLoaded ? 1 : 0 }}
+        />
+      </div>
+    );
   };
 
   const teams = [
@@ -122,25 +164,7 @@ const Main = () => {
 
       <div className="video-container">
         <div className="video-box">
-          <video
-            autoPlay
-            loop
-            muted
-            className="video-tedx"
-            style={{
-              // position: "absolute",
-              width: "100%",
-              height: "auto",
-              // left: "50%",
-              // top: "60%",
-              // height: "100vh",
-              objectFit: "cover",
-              // transform: "translate(-50%, -50%)",
-              // zIndex: "-1",
-            }}
-          >
-            <source src={videoTedx} type="video/mp4" />
-          </video>
+          <Video />
         </div>
       </div>
 
