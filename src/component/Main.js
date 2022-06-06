@@ -12,7 +12,7 @@ import tanganKanan from "../assets/images/tangan-kanan.png"
 import burnPaper from "../assets/images/BurnPaper-1.png"
 
 import videoTedx from "../assets/videos/web-landscape.mp4"
-import videoTedxVertical from "../assets/videos/web-vertical.mp4"
+import videoTedxVertical from "../assets/videos/web-vertical-1.mp4"
 import { useEffect, useState } from "react";
 import { Dialog } from "@mui/material";
 
@@ -63,8 +63,8 @@ const Main = () => {
           className="video-tedx"
           playsInline
           src={src}
-          onLoadedData={onLoadedData}
-          style={{ width: "100vw", height: "100vh", objectFit: "cover", opacity: isVideoLoaded ? 1 : 0 }}
+          // onLoadedData={onLoadedData}
+          style={{ width: "100vw", height: "100vh", objectFit: "cover"}}
         />
         {/* <iframe
           width="853"
