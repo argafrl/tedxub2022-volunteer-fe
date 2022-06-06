@@ -135,6 +135,9 @@
       @include breakpoint(md) {
         width: 290%;
       }
+      @media screen and (max-width: 415px) {
+        width: 310%;
+      }
       @media screen and (max-width: 404px) {
         width: 320%;
       }
@@ -461,6 +464,11 @@
     font-size: 70px;
     text-align: center;
     text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+    transition: 0.3s;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
     @include breakpoint(md) {
       font-size: rem(30);
     }
