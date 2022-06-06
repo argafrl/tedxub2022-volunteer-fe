@@ -1,6 +1,7 @@
 {
   "name": "tedxub2022-volunteer-fe",
   "version": "0.1.0",
+  "homepage": "https://tedxuniversitasbrawijaya.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

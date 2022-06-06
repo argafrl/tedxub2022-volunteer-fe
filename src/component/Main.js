@@ -81,7 +81,7 @@ const Main = () => {
       nama: "EM",
       fullNama: "EVENT MANAGER",
       desc: `Bertanggung jawab atas “TEDx Experience” untuk para audiens serta merancang dan mengatur segala kebutuhan dan jalannya acara.`,
-      req: `Menulis esai tentang “Bagaimana referensi, ide, dan sudut pandang mengenai event yang menarik, cara pengimplementasiannya, dan apa yang membuatmu dan idemu berbeda dengan yang lain” sebanyak 500-600 kata.`
+      req: `Menulis esai tentang “Bagaimana referensi, ide, dan sudut pandang mengenai event yang menarik, cara pengimplementasiannya, dan apa yang membuatmu dan idemu berbeda dengan yang lain” sebanyak 300-500 kata.`
     },
     {
       nama: "EP",
@@ -251,7 +251,7 @@ const Main = () => {
 
       <div className="daftar">
         <h1>DAFTAR <span style={{color: "red"}}>SEGERA</span></h1>
-        <h2>Periode Pendaftaran: 6 Juni - 10 Juni 2020</h2>
+        <h2>Periode Pendaftaran: 6 Juni - 13 Juni 2022</h2>
         <div className="button-registrasi">
           <a target="blank" href="https://forms.gle/Kg2zczmGVzKNvrYB6"><button >FORM REGISTRASI</button></a>
         </div>
