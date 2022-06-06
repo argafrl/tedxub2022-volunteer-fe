@@ -59,7 +59,7 @@ const Main = () => {
         <video
           autoPlay
           loop
-          muted
+          // muted
           className="video-tedx"
           playsInline
           src={src}
