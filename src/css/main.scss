@@ -388,7 +388,7 @@
         transition: 0.3s;
         
         &:hover {
-          transform: scale(1.02);
+          transform: scale(0.95);
         }
 
         @include breakpoint(md) {
@@ -401,18 +401,41 @@
     .tangan{
       display: flex;
       width: 100%;
-      margin-top: -200px;
+      margin-top: -250px;
       z-index: -1;
+      @include breakpoint(xl) {
+        margin-top: -150px;
+      }
+      @include breakpoint(lg) {
+        margin-top: -70px;
+      }
       @include breakpoint(md) {
         margin-top: -55px;
       }
       img{
         width: 50%;
       }
+      .tangan-kiri.true{
+        transform: rotate(5deg);
+        transition: all 0.35s ease-in-out;
+      }
+      .tangan-kiri.false{
+        transform: rotate(0deg);
+        transition: all 0.35s ease-in-out;
+      }
+      .tangan-kanan.true{
+        transform: rotate(-2deg);
+        transition: all 0.25s ease-in-out;
+      }
+      .tangan-kanan.false{
+        transform: rotate(0deg);
+        transition: all 0.25s ease-in-out;
+      }
     }
   }
 
   .footer{
+    z-index: 999;
     margin-top: -300px;
     background-image: url("../assets/images/footer-background.png");
     background-size: cover;

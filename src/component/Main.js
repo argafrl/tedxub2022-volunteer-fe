@@ -15,11 +15,17 @@ import videoTedx from "../assets/videos/web-landscape.mp4"
 import videoTedxVertical from "../assets/videos/web-vertical-1.mp4"
 import { useEffect, useState } from "react";
 import { CircularProgress, Dialog } from "@mui/material";
+import { Fade, Roll, Zoom } from "react-reveal";
 
 const Main = () => {
 
   const [open, setOpen] = useState('');
   const [width, setWindowWidth] = useState(0);
+  const [hoverHand, setHoverHand] = useState(false);
+
+  const handleHoverHand = (hand) => {
+    setHoverHand(hand);
+  }
 
   const updateDimensions = () => {
     const width = window.innerWidth
@@ -50,10 +56,13 @@ const Main = () => {
 
   const Video = props => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
     const src = getVideoSrc(window.innerWidth);
     const onLoadedData = () => {
       setIsVideoLoaded(true);
     };
+
+
     return (
       <div className="container">
         {/* <div className="spinner-wrapper">
@@ -188,27 +197,33 @@ const Main = () => {
       </div>
 
       <div className="tentang-tedx">
-        <h1 className="tentang">TENTANG <span style={{color: "red", fontSize: "200px"}}>TEDx</span></h1>
+        <Zoom>
+          <h1 className="tentang">TENTANG <span style={{color: "red", fontSize: "200px"}}>TEDx</span></h1>
+        </Zoom>
+        <Fade>
         <p>
           <span style={{color: "red"}}>TED</span>(Technology, Entertainment and Design) is a nonproﬁt organization devoted to spreading ideas, usually in the form of short, 
           powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, 
           and today covers almost all topics — from science to business to global issues — in more than 100 languages. 
           Meanwhile, independently run TEDx events help share ideas in communities around the world.
         </p>
-
+        </Fade>
+        <Fade>
         <p>
           <span style={{color: "red"}}>TEDx</span> brings the spirit of TED’s mission of ideas worth spreading to local communities around the globe. 
           TEDx events are organized by curious individuals who seek to discover ideas and spark conversations in their own community. 
           TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED.
         </p>
-
+        </Fade>
+        <Fade>
         <p>
           If you're eager to know more about TED, please visit:<br />
           <a target="blank" href="https://www.ted.com"><span style={{color: "red"}}>TED: www.ted.com</span><br /></a>
           <a target="blank" href="https://www.ted.com/tedx"><span style={{color: "red"}}>TEDx: www.ted.com/tedx</span></a>
         </p>
+        </Fade>
       </div>
-
+      <Zoom>
       <div className="merayakan">
         <img src={burnPaper} alt="Paper" />
         <div className="merayakan-content">
@@ -222,12 +237,18 @@ const Main = () => {
           </p>
         </div>
       </div>
+      </Zoom>
 
       <div className="pencarian">
-        <h1>PENCARIAN<br /><span style={{color: "red", fontSize: "150px"}}>VOLUNTEER</span></h1>
+        <Zoom>
+          <h1>PENCARIAN<br /><span style={{color: "red", fontSize: "150px"}}>VOLUNTEER</span></h1>
+        </Zoom>
+        <Fade>
         <p>
           Dalam menjalankan misi kami untuk menyebarkan “Ideas Worth Spreading”, kami menginginkan kamu, individu-individu dengan faktor “X” untuk bergabung bersama kami dalam TEDxUniversitasBrawijaya dan berkolaborasi memberikan ide dan gagasan untuk “merayakan kembali.”
         </p>
+        </Fade>
+        <Fade>
         <div className="carousel">
           <Slider {...settings}>
             {teams.map((team, idx) => (
@@ -259,19 +280,23 @@ const Main = () => {
             ))}
           </Slider>
         </div>
+        </Fade>
 
 
       </div>
 
       <div className="daftar">
+        <Zoom>
         <h1>DAFTAR <span style={{color: "red"}}>SEGERA</span></h1>
+        </Zoom>
         <h2>Periode Pendaftaran: 6 Juni - 13 Juni 2022</h2>
         <div className="button-registrasi">
-          <a target="blank" href="https://forms.gle/Kg2zczmGVzKNvrYB6"><button >FORM REGISTRASI</button></a>
+          
+          <a target="blank" href="https://forms.gle/Kg2zczmGVzKNvrYB6"><button onMouseOver={() => handleHoverHand(true)} onMouseOut={() => handleHoverHand(false)}>FORM REGISTRASI</button></a>
         </div>
         <div className="tangan">
-          <img src={tanganKiri} alt="tangan-kiri" className="tangan-kiri" />
-          <img src={tanganKanan} alt="tangan-kanan" className="tangan-kanan" />
+          <img src={tanganKiri} alt="Tangan Kiri" className={`tangan-kiri ${hoverHand}`} />
+          <img src={tanganKanan} alt="Tangan Kanan" className={`tangan-kanan ${hoverHand}`} />
         </div>
       </div>
 
