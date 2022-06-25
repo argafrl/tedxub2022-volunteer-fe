@@ -112,7 +112,7 @@
       z-index: 996;
       width: 100%;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1280px) {
         width: 120%;
         margin-left: -100px;
         overflow: hidden;
@@ -168,9 +168,6 @@
       padding: 0 10%;
       @media screen and (max-width: 1400px) {
         margin-top: 15%;
-      }
-      @media screen and (max-width: 1300px) {
-        margin-top: 12%;
       }
       @media screen and (max-width: 1300px) {
         margin-top: 150px;
