@@ -289,7 +289,7 @@ const Main = () => {
         <Zoom>
         <h1>DAFTAR <span style={{color: "red"}}>SEGERA</span></h1>
         </Zoom>
-        <h2>Pendaftaran Telah Ditutup</h2>
+        <h2>Pendaftaran Sudah Ditutup</h2>
         <div className="button-registrasi">
           
           <a target="blank" href="https://forms.gle/Kg2zczmGVzKNvrYB6"><button onMouseOver={() => handleHoverHand(true)} onMouseOut={() => handleHoverHand(false)}>FORM REGISTRASI</button></a>
